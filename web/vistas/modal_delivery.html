@@ -1,0 +1,108 @@
+<!-- Modal -->
+<div class="modal fade" id="modal_delivery" role="dialog">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title"><strong>Agregar Delivery</strong></h2>
+            </div>
+            <form id="form-delivery">
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label  for="nombre">C.I.: </label>
+                                <input type="text" class="form-control num" id="ci" name="cedula" autocomplete="off" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="nombre">Nombre: </label>
+                                <input type="text" class="form-control" id="nombre" name="nombre" autocomplete="off" required>
+                            </div>
+                            <div class="form-group">
+                                <div class="row">
+                                    <label style="padding-left: 15px;">N° de Documento: </label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control num doc" autocomplete="off" name="ruc">
+                                    </div>
+                                    <div class="col-sm-2">
+                                        <input type="text" class="form-control dv" autocomplete="off" name="ruc_dv">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="nombre_cli">Razón Social: </label>
+                                <input type="text" class="form-control" name="razon_social" autocomplete="off">       
+                            </div>
+                            <div class="form-group">
+                                <label for="tel">Dirección: </label>
+                                <input type="text" class="form-control" id="direccion" name="direccion" autocomplete="off">
+                            </div>
+                            <div class="form-group">
+                                <label for="tel">Ubicación: </label>
+                                <input type="text" class="form-control" id="ubicacion" name="ubicacion" autocomplete="off">
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label  for="tel">Referencia: </label>
+                                <input type="text" class="form-control" id="referencia" name="referencia" autocomplete="off">
+                            </div>
+                            <div class="form-group">
+                                <label for="tel">Celular: </label>
+                                <input type="text" class="form-control" name="celular" autocomplete="off">
+                            </div>
+                            <div class="form-group">
+                                <label for="tel">Teléfono: </label>
+                                <input type="text" class="form-control" name="telefono" autocomplete="off">
+                            </div>
+                            <!--                            <div class="form-group">
+                                                            <label for="select-tipopago">Tipo de Pago</label>
+                                                            <select class="form-control" id="select-tipopago" name="id_tipo_pago">
+                                                                <option value="1">EFECTIVO</option>
+                                                                <option value="2">CHEQUE</option>
+                                                                <option value="3">TARJETA DE CRÉDITO</option>
+                                                                <option value="4">TARJETA DE DÉBITO</option>
+                                                                <option value="5">GIROS</option>
+                                                                <option value="6">TRANSFERENCIAS</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="aux">
+                            
+                                                        </div>-->
+                            <div class="form-group">
+                                <div class="date">
+                                    <label>Fecha: </label>
+                                    <input type="text" class="form-control" name="fecha" data-mask="99/99/9999" autocomplete="off">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="row">
+                                    <label style="padding-left: 15px;">Horario: </label>
+                                    <div class="col-sm-12">
+                                        <div class="input-group">
+                                            <input type="text" class="input-sm form-control" data-mask="99:99" pattern="^(0[0-9]|1[0-9]|2[0-3]):[0-5][0-9]$" name="hora_inicio" autocomplete="off" required="">
+                                            <span class="input-group-addon">Hasta</span>
+                                            <input type="text" id="fin" class="input-sm form-control" data-mask="99:99" pattern="^(0[0-9]|1[0-9]|2[0-3]):[0-5][0-9]$" name="hora_fin" autocomplete="off" required="">
+                                        </div>
+                                        <span class="text-danger hide"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--                            <div class="form-group">
+                                                            <label>Total a Pagar</label>
+                                                            <input class="form-control miles" name="total_pago" value="" onfocus="this.select()"/>
+                                                        </div>-->
+                            <div class="form-group">
+                                <label>Notas/Observaciones: </label>
+                                <textarea class="form-control" name="observaciones"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                    <button type="submit" id="save" class="save btn btn-primary">Guardar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

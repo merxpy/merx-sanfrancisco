@@ -1,0 +1,186 @@
+<div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-10">
+        <h2>Artículos</h2>
+        <ol class="breadcrumb">
+            <li>
+                <a href="#/inicio">Inicio</a>
+            </li>
+            <li>
+                <a class="breaditem">Artículos</a>
+            </li>
+            <li class="active">
+                <strong>Nuevo Artículo</strong>
+            </li>
+        </ol>
+    </div>
+</div>
+<div class="wrapper wrapper-content animated fadeInRight ecommerce">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="ibox float-e-margins">
+                <div class="ibox-title">
+                    <h5>Nuevo Artículo</h5>
+                </div>
+                <div class="ibox-content">
+                    <form id="form-art" action="#" class="form-horizontal wizard-big" accept-charset="UTF-8">
+                        <h1>Producto</h1>
+                        <fieldset style="position: relative">
+                            <h2>Información del Producto</h2>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label class="control-label col-sm-3" for="codigo_ar">Código: </label>
+                                        <div class="col-sm-8">
+                                            <input type="text" class="form-control" id="codigo_ar" data-code="0" name="codigo_ar" required>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label col-sm-3" for="barcode_ar">Código de Barras: </label>
+                                        <div class="col-sm-8">
+                                            <input type="text" class="form-control num" id="barcode_ar" name="barcode_ar">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label col-sm-3" for="nombre_ar">Nombre:</label>
+                                        <div class="col-sm-8">
+                                            <input type="text" class="form-control" id="nombre_ar" name="nombre_ar" required>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label col-sm-3" for="descripcion_ar">Descripción:</label>
+                                        <div class="col-sm-8">
+                                            <textarea class="form-control" id="descripcion_ar" name="descripcion_ar"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label col-sm-3" for="stock_min">Stock Inicial: </label>
+                                        <div class="col-sm-8">
+                                            <input type="number" class="form-control num" id="stock_ini" name="stock_inicial" value="0">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label col-sm-3" for="stock_min">Stock Mínimo: </label>
+                                        <div class="col-sm-8">
+                                            <input type="text" class="form-control num" id="stock_min" name="stock_minimo_ar" value="0">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label col-sm-3" for="precio_compra_ar">Precio Compra: </label>
+                                        <div class="col-sm-8">
+                                            <input type="text" class="form-control miles" value="0" name="precio_compra_ar" id="precio_compra_ar" maxlength="11">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label col-sm-3" for="precio_ar">Precio Neto: </label>
+                                        <div class="col-sm-8">
+                                            <input type="text" class="form-control" value="0" name="precio_neto_ar" id="precio_ar" readOnly>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label class="control-label col-sm-3 " for="utilidad">Utilidad (%) / Ganancia: </label>
+                                        <div class="col-sm-4">
+                                            <input type="text" class="form-control decimals" value="0" id="utilidad" name="utilidad">
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <input type="text" class="form-control num" id="uti" value="0" name="monto_utilidad_ar" placeholder="Valor" readOnly>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label col-sm-3" for="precio_gan">Precio Neto + Utilidad: </label>
+                                        <div class="col-sm-8">
+                                            <input type="text" class="form-control" value="0" name="precio_utilidad_ar" id="precio_gan" readonly>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label col-sm-3" for="iva_ar">IVA: </label>
+                                        <div class="col-sm-4">
+                                            <select class="form-control" id="iva_ar" name="iva_ar" required>
+                                                <option value="10">10%</option>
+                                                <option value="5">5%</option>
+                                                <option value="E">Exenta</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <input type="text" class="form-control num" id="iva" name="iva_venta_ar" placeholder="Valor" readOnly>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label col-sm-3" for="precio_venta">Precio Venta: </label>
+                                        <div class="col-sm-8">
+                                            <input type="text" class="form-control miles" name="precio_venta_ar" value="0" id="precio_venta" maxlength="11" required>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label col-sm-3" for="unidad">Unidad: <br><a class="undefined" data-href="unidad"><small>¿Agregar Unidad?</small></a></label>
+                                        <div class="col-sm-8 unidad">
+                                            <select class="form-control select2" data-width="100%" id="select-unidad" name="id_unidad" required>
+                                                <option></option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label col-sm-3" for="mar">Marca: <br><a class="undefined" data-href="marca"><small>¿Agregar Marca?</small></a></label>
+                                        <div class="col-sm-8 marca">
+                                            <select class="form-control select2" data-width="100%" id="select-marca" name="id_marca">
+                                                <option></option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label col-sm-3" for="eti">Etiqueta: <br><a class="undefined" data-href="etiqueta"><small>¿Agregar Etiqueta?</small></a></label>
+                                        <div class="col-sm-8 etiquetas">
+                                            <select class="form-control select2" data-width="100%" id="select-etiqueta" name="id_etiqueta">
+                                                <option></option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label col-sm-3" for="categoria">Categoria: <br><a class="undefined" data-href="categoria"><small>¿Agregar Categoria?</small></a></label>
+                                        <div class="col-sm-8 etiquetas">
+                                            <select class="form-control select2" data-width="100%" id="select-categoria" name="id_categoria">
+                                                <option></option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> 
+                        </fieldset>
+                        <h1>Imágenes</h1>
+                        <fieldset style="position: relative">
+                            <button type="button" class="add btn btn-primary btn-xs pull-right" id="nimg"><i class="glyphicon glyphicon-upload"></i> Subir Imagen</button>
+                            <h2>Cargar Imágenes</h2>
+                            <div class="row">
+                                <div class="table-responsive">
+                                    <table class="table table-bordered table-stripped">
+                                        <thead>
+                                            <tr>
+                                                <th>
+                                                    Vista Previa
+                                                </th>
+                                                <th>
+                                                    Orden
+                                                </th>
+                                                <th>
+                                                    Acciones
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="timg">
+                                            <tr id="nulo">
+                                                <td colspan="3" class="text-center">Ningún archivo seleccionado</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <input type="file" id="upphoto" name="foto_ar" class="hide"/>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="modal"></div>

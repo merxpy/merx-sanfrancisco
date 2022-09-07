@@ -1,0 +1,78 @@
+<!-- Modal -->
+<div class="modal inmodal fade" id="Modal-pago" tabindex="-1" role="dialog"  aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <form id="aceptar">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">
+                        <span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+                    </button>
+                    <h4 class="modal-title">Concretar Venta</h4>
+                </div>
+                <div class="modal-body">
+
+                    <center><p class="text text-success">Total a Pagar</p></center>
+                    <center><h1 class="text text-success" id="pagar"></h1></center>
+                    <center><p class="text text-success" id="letras"></p></center>
+                    <div class="row">
+                        <div>
+                            <center>
+                                <img src="img/money.png" style="width: 48px; height: 48px;">
+                            </center>   
+                            <div class="col-sm-8 col-sm-offset-2">
+                                <div class="form-group">
+                                    <center>
+                                        <div class="col-sm-12">
+                                            <div class="input-group m-b">
+                                                <select class="form-control" id="select-tipopago" name="select-tipopago">
+                                                    <option value="1">EFECTIVO</option>
+                                                    <option value="2">CHEQUE</option>
+                                                    <option value="3">TARJETA DE CRÉDITO</option>
+                                                    <option value="4">TARJETA DE DÉBITO</option>
+                                                    <option value="5">GIROS</option>
+                                                    <option value="6">TRANSFERENCIAS</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </center>
+                                </div>
+                                <div class="form-group">
+                                    <div class="aux">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-sm-12">
+                                        <input type="text" class="form-control m-b text-center miles" id="efectivo" name="efectivo" required=""  autocomplete="off">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-1">
+                            <img src="img/manager.png" style="width: 32px; height: 32px;" class="m-b">
+                        </div> 
+                        <div class="col-sm-4">
+                            <p id="customer"></p>
+                            <p id="documento"></p>
+                        </div>
+                        <div class="col-sm-7">
+                            <div class="form-group pull-right">
+                                <p class="text-green"><b>Vuelto</b> </p>
+                                <h1 class="text-green" id="cambio"><b>0 Gs.</b></h1>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <center>
+                        <button type="submit" class="btn btn-primary"><i class="fa fa-check text-warning"></i> Aceptar</button>
+                    </center>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

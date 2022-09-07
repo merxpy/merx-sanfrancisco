@@ -1,0 +1,104 @@
+<div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-10">
+        <h2>Gastos</h2>
+        <ol class="breadcrumb">
+            <li>
+                <a href="#/inicio">Inicio</a>
+            </li>
+            <li class="active">
+                <a href="#/gastos">Gastos</a>
+            </li>
+            <li class="active">
+                <strong>Nuevo</strong>
+            </li>
+        </ol>
+    </div>
+    <div class="col-lg-2">
+    </div>
+</div>   
+<div class="wrapper wrapper-content animated fadeInRight">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="ibox float-e-margins">
+                <div class="ibox-title">
+                    <h5>Nuevo Gasto</h5>
+                </div>
+                <div class="ibox-content">
+                    <form id="form-gasto">
+                        <div class="row">
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label">*Proveedor</label>
+                                <div class="col-sm-4">
+                                    <div class="input-group m-b">
+                                        <select id="pro" class="select-ajax" name="id_proveedor" tabindex="1" required="required"></select>
+                                        <span class="input-group-btn">
+                                            <a id="nuevo" class="btn btn-primary" tabindex="2"><i class="fa fa-plus"></i></a> 
+                                        </span>                 
+                                    </div>
+                                </div>
+                                <label class="col-sm-1 control-label">*Fecha </label>
+                                <div class="col-sm-2">
+                                    <div class="date">
+                                        <input type="text" class="form-control" name="fecha" data-mask="99/99/9999" tabindex="3" autocomplete="off" required>
+                                    </div>
+                                </div>
+                                <label class="col-sm-1 control-label">*N° Factura </label>
+                                <div class="col-sm-3">
+                                    <input type="text" name="nro_factura" class="form-control" data-mask="999-999-9999999" tabindex="4" autocomplete="off" required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label">Timbrado: </label>
+                                <div class="col-sm-3">
+                                    <input type="text" name="timbrado" class="form-control" data-mask="99999999" tabindex="5" autocomplete="off" required>
+                                </div>
+                                <div class="col-sm-2">
+                                    <div>
+                                        <label> 
+                                            <input type="radio" tabindex="8" checked="" value="contado" name="tipo_gasto"> Contado
+                                        </label>
+                                    </div>
+                                    <div>
+                                        <label>
+                                            <input type="radio"  tabindex="9" value="crédito" name="tipo_gasto"> Crédito
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="table table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>Exentas</th>
+                                        <th>Total 5</th>
+                                        <th>Total 10</th>
+                                        <th>Total</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><input class="form-control miles" tabindex="12" type="text" name="total_exenta" value="0" required=""></td>
+                                        <td><input class="form-control miles" tabindex="11" type="text" name="total_5" value="0" required=""></td>
+                                        <td><input class="form-control miles" tabindex="10" type="text" name="total_10" value="0" required=""></td>
+                                        <td><input class="form-control" type="text" name="total_gasto" value="0" readonly="readonly"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="col-xs-offset-6">
+                            <button type="submit" class="btn btn-default" tabindex="14">Finalizar</button>
+                            <button type="submit" class="btn btn-primary" tabindex="13">Siguiente</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal -->
+<div id="modal-x"></div>
+<div id="modal"></div>
+

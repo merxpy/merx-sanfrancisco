@@ -1,0 +1,15 @@
+@media print{
+    .sub{
+        border-bottom: 1px solid #000;
+    }
+    .cab {
+        border-bottom: 1px solid #000;
+        width: 40%;
+    }
+    .det{
+        text-align: right;
+    }
+    .tit{
+        padding: 0 2px 10px;
+    }
+}

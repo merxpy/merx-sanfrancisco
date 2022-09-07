@@ -1,0 +1,100 @@
+<div class="modal inmodal fade" id="modal-cja" tabindex="-1" role="dialog"  aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <form id="form-arqueo">
+                <div class="modal-header">
+                    <h4 class="modal-title">Caja: Caja 1</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-sm-8">
+                            <table class="table" id="calculos">
+                                <thead>
+                                    <tr>
+                                        <th scope="col"></th>
+                                        <th scope="col">Contado</th>
+                                        <th scope="col">Calculado</th>
+                                        <th scope="col">Diferencia</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">Efectivo</th>
+                                        <td><input type="text" class="form-control miles count" value="0" data-val="efectivo" onclick="$(this).select();" /></td>
+                                        <td><input type="text" id="efectivo" class="form-control" value="0" readonly="" tabIndex="-1" /></td>
+                                        <td><input type="text" id="difefectivo" class="form-control" value="0" readonly="" tabIndex="-1" /></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Cheque</th>
+                                        <td><input type="text" class="form-control miles count" value="0" data-val="cheque" onclick="$(this).select();" /></td>
+                                        <td><input type="text" id="cheque" class="form-control" value="0" readonly="" tabIndex="-1" /></td>
+                                        <td><input type="text" id="difcheque" class="form-control" value="0" readonly="" tabIndex="-1" /></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Tarjeta de Crédito </th>
+                                        <td><input type="text" class="form-control miles count" value="0"  data-val="tc" onclick="$(this).select();" /></td>
+                                        <td><input type="text" id="tc" class="form-control" value="0" readonly="" tabIndex="-1" /></td>
+                                        <td><input type="text" id="diftc" class="form-control" value="0" readonly="" tabIndex="-1" /></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Tarjeta de Débito</th>
+                                        <td><input type="text" class="form-control miles count" value="0"  data-val="td" onclick="$(this).select();" /></td>
+                                        <td><input type="text" id="td" class="form-control" value="0" readonly="" tabIndex="-1" /></td>
+                                        <td><input type="text" id="diftd" class="form-control" value="0" readonly="" tabIndex="-1" /></td>
+                                    </tr>
+                                </tbody>
+                                <tfoot>
+                                    <tr>
+                                        <th scope="row">Total</th>
+                                        <td><input type="text" class="form-control" value="0" id="contado" readonly="" tabIndex="-1" /></td>
+                                        <td><input type="text" class="form-control" value="0" id="calculado" readonly="" tabIndex="-1" /></td>
+                                        <td><input type="text" class="form-control" value="0" id="diferencia" readonly="" tabIndex="-1" /></td>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                        </div>
+                        <div class="col-sm-4">
+                            <table class="table" id="extracciones">
+                                <thead>
+                                    <tr>
+                                        <th colspan="2" class="text-center">Retiro por Corte</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">Efectivo: </th>
+                                        <td><input type="text" id="retefectivo" class="form-control miles retired" onclick="$(this).select();" value="0" /></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Cheque: </th>
+                                        <td><input type="text" id="retcheque" class="form-control miles retired" onclick="$(this).select();" value="0" /></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Tarjeta de Crédito: </th>
+                                        <td><input type="text" id="rettc" class="form-control miles retired" onclick="$(this).select();" value="0" /></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Tarjeta de Débito: </th>
+                                        <td><input type="text" id="rettd" class="form-control miles retired" onclick="$(this).select();" value="0" /></td>
+                                    </tr>
+                                </tbody>
+                                <tfoot>
+                                    <tr>
+                                        <th scope="row">Total: </th>
+                                        <td><input type="text" id="totalret" class="form-control miles" value="0" readonly="" disabled="" tabIndex="-1" /></td>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <center>
+                        <button type="submit" class="btn btn-primary">Guardar</button>
+                        <button type="submit" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                    </center>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,157 @@
+<!-- Modal -->
+<div class="modal fade" id="Modal-art" role="dialog">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Cerrar</span></button>
+                <h2 class="modal-title"><strong>Detalle del Artículo</strong></h2>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="ibox product-detail">
+                            <div>
+                                <div class="row">
+                                    <div class="col-md-5">
+                                        <div class="product-images">
+
+                                        </div>
+                                    </div>
+                                    <div class="col-md-7">
+                                        <h2 class="font-bold m-b-xs t1"></h2>
+                                        <small class="codigo">Many desktop publishing packages and web page editors now.</small>
+                                        <div class="m-t-md">
+                                            <h2 class="product-main-price">$406,602 <small class="text-muted">Exclude Tax</small> </h2>
+                                        </div>
+                                        <hr>
+                                        <h4>Descripcion del Producto</h4>
+                                        <div class="small text-muted description">
+                                            It is a long established fact that a reader will be distracted by the readable
+                                            content of a page when looking at its layout. The point of using Lorem Ipsum is
+                                            <br/>
+                                            <br/>
+                                            There are many variations of passages of Lorem Ipsum available, but the majority
+                                            have suffered alteration in some form, by injected humour, or randomised words
+                                            which don't look even slightly believable.
+                                        </div>
+                                        <dl class="small m-t-md">
+                                            <dt>Marca</dt>
+                                            <dd class="t2">A description list is perfect for defining terms.</dd>
+                                            <dt>Unidad de Medida</dt>
+                                            <dd class="t3">Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.</dd>
+                                            <dt>Etiqueta</dt>
+                                            <dd class="t4">Etiam porta sem malesuada magna mollis euismod.</dd>
+                                        </dl>
+                                        <hr>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--<div class="modal fade" id="Modal-art" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title"><strong>Agregar Artículos</strong></h2>
+            </div>
+            <form class="form-horizontal" id="form-art" enctype="multipart/form-data">
+                <div class="modal-body">
+                    <div class="form-group">
+                        <a id="uploadphoto">
+                            <div class="col-sm-3 pull-right">
+                                <span class="clear"> 
+                                    <span class="block m-t-xs"> 
+                                        <img src="img/photo.png" id="photo-ar" class="img-thumbnail" alt="74x74" style="width: 74px; height: 74px"/>
+                                    </span> 
+                                </span> 
+                            </div>
+                        </a>
+                        <label class="control-label col-sm-3" for="codigo_ar">Código: </label>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control m-b" id="codigo_ar" name="codigo_ar" required>
+                        </div>
+                        <label class="control-label col-sm-3" for="barcode_ar">Código de Barras: </label>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control num" id="barcode_ar" name="barcode_ar">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-3" for="nombre_ar">Nombre:</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" id="nombre_ar" name="nombre_ar" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-3" for="descripcion_ar">Descripción:</label>
+                        <div class="col-sm-8">
+                            <textarea class="form-control" id="descripcion_ar" name="descripcion_ar"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-3" for="stock_min">Stock minimo: </label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control num" id="stock_min" name="stock_minimo_ar" value="0">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-3" for="precio_ar">Precio: </label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control num" id="precio_ar" name="precio_ar" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-3" for="precio_compra_ar">Precio Compra: </label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control num" id="precio_compra_ar" name="precio_compra_ar">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-3" for="iva_ar">IVA: </label>
+                        <div class="col-sm-8">
+                            <select class="form-control" id="iva_ar" name="iva_ar" required>
+                                <option value="10">10%</option>
+                                <option value="5">5%</option>
+                                <option value="E">Exenta</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-3" for="unidad">Unidad: <br><a class="undefined" data-href="unidad"><small>¿Agregar Unidad?</small></a></label>
+                        <div class="col-sm-8 unidad">
+                            <select class="form-control select2" data-width="100%" id="select-unidad" name="id_unidad" required>
+                                <option></option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-3" for="mar">Marca: <br><a class="undefined" data-href="marca"><small>¿Agregar Marca?</small></a></label>
+                        <div class="col-sm-8 marca">
+                            <select class="form-control select2" data-width="100%" id="select-marca" name="id_marca">
+                                <option></option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-3" for="eti">Etiqueta: <br><a class="undefined" data-href="etiqueta"><small>¿Agregar Etiqueta?</small></a></label>
+                        <div class="col-sm-8 etiquetas">
+                            <select class="form-control select2" data-width="100%" id="select-etiqueta" name="id_etiqueta">
+                                <option></option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                    <button type="submit" id="save" class="save btn btn-primary">Guardar</button>
+                </div>
+                <input type="file" id="upphoto" name="foto_ar" class="hide"/>
+            </form>
+        </div>
+    </div>
+</div>-->

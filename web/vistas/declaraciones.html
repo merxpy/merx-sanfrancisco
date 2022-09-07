@@ -1,0 +1,41 @@
+<!-- Modal -->
+<div class="modal fade" id="modal-ddji" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title"><strong>Declaraciones Informativas</strong></h2>
+            </div>
+            <form class="form-horizontal" method="POST" action="HechaukaExports">
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label class="control-label col-sm-3" for="nombre">Tipo de Información </label>
+                        <div class="col-sm-8">
+                            <select class="form-control" name="tipo_info">
+                                <option value="compras">Libro de Compras</option>
+                                <option value="ventas">Libro de Ventas</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-3">Periodo: </label>
+                        <div class="col-sm-8">
+                            <select class="form-control" name="periodo">
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-3">Mes: </label>
+                        <div class="col-sm-8">
+                            <select class="form-control" name="mes">
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                    <button type="submit" class="save btn btn-primary">Generar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

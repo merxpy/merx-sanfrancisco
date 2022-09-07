@@ -1,0 +1,41 @@
+<div class="modal fade" id="modal-nota" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title"><strong>Agregar Nota</strong></h2>
+            </div>
+            <form id="form-nota" class="form-horizontal">
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label class="control-label col-sm-3" for="titulo_anotacion">Título: </label>
+                        <div class="col-sm-8" id="parent">          
+                            <input class="form-control" name="titulo_anotacion" required="required">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-3" for="contenido_anotacion">Nota:</label>
+                        <div class="col-sm-8">
+                            <textarea class="form-control" name="contenido_anotacion" required="required"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-3">Color:</label>
+                        <div class="col-sm-8">          
+                            <input type="text" class="palette color-palette" name="color_anotacion" readOnly required="required">
+                        </div>
+                    </div>                    
+                    <div class="form-group">
+                        <label class="control-label col-sm-3" for="vencimiento_anotacion">Vencimiento: </label>
+                        <div class="col-sm-4 date">          
+                            <input class="form-control" name="vencimiento_anotacion" data-mask="99/99/9999" required="required">
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                    <button type="submit" id="save" class="save btn btn-primary">Guardar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

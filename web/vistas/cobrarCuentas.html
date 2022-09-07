@@ -1,0 +1,95 @@
+<div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-10">
+        <h2>Cuentas</h2>
+        <ol class="breadcrumb">
+            <li>
+                <a href="#/inicio">Inicio</a>
+            </li>
+            <li class="active">
+                <a href="#/cuentas">Cuentas</a>
+            </li>
+            <li class="active">
+                <strong>Cobrar</strong>
+            </li>
+        </ol>
+    </div>
+    <div class="col-lg-2">
+    </div>
+</div>   
+<div class="wrapper wrapper-content animated fadeInRight">
+    <div class="row">
+        <div class="col-lg">
+            <div class="ibox float-e-margins">
+                <div class="ibox-title">
+                    <h5>Realizar Cobro</h5>
+                </div>
+                <div class="ibox-content">
+                    <div class="row">
+                        <form id="form-cobrar">
+                            <div class="col-sm-4 b-r">
+                                <div class="form-group">
+                                    <label>Cliente</label>
+                                    <input class="form-control" value="" name="nombre_cli" readonly="readonly"/>
+                                </div>
+                                <div class="form-group">
+                                    <label>RUC</label>
+                                    <input class="form-control" value="" name="ruc_cli" readonly="readonly"/>
+                                </div>
+                                <div class="form-group">
+                                    <label>Tipo de Pago</label>
+                                    <select class="form-control" id="select-tipopago" name="id_tipo_pago">
+                                        <option value="1">EFECTIVO</option>
+                                        <option value="2">CHEQUE</option>
+                                        <option value="3">TARJETA DE CRÉDITO</option>
+                                        <option value="4">TARJETA DE DÉBITO</option>
+                                        <option value="5">GIROS</option>
+                                        <option value="6">TRANSFERENCIAS</option>
+                                    </select>
+                                </div>
+                                <div class="aux">
+
+                                </div>
+                                <div class="form-group">
+                                    <label>Descuentos</label>
+                                    <input class="form-control miles" name="descuento_ped" value=""/>
+                                </div>
+                                <div class="form-group">
+                                    <input type="checkbox" name="porcentaje">
+                                    <label>Porcentaje</label>
+                                </div>
+                                <div class="form-group">
+                                    <label>Total a Pagar</label>
+                                    <input class="form-control miles" name="cobrar" value="" onfocus="this.select()"/>
+                                </div>
+                                <div>
+                                    <button class="btn btn-sm btn-primary pull-right m-t-n-xs" type="submit"><strong>Cobrar</strong></button>
+                                </div>
+                            </div>
+                        </form>
+                        <div class="col-sm-8">
+                            <table class="table table-responsive">
+                                <thead>
+                                    <tr>
+                                        <th>Nro</th>
+                                        <th>Fecha</th>
+                                        <th>Pagado</th>
+                                        <th>Saldo</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                </tbody>
+                                <tfoot>
+                                </tfoot>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+    </div>
+</div>
+<!-- Modal -->
+<div id="modal"></div>
+

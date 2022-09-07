@@ -1,0 +1,55 @@
+<div class="modal fade" id="modal-estados" role="dialog">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title"><strong>Cambiar Estados</strong></h2>
+                <div class="row m-t">
+                    <div class="col-sm-12">
+                        <div class="row">
+                            <div class="col-sm-2"><strong>Cliente:</strong></div>
+                            <div class="col-sm-3" id="cliente"></div>
+                            <div class="col-sm-2 col-sm-offset-2"><strong>R.U.C.:</strong></div>
+                            <div class="col-sm-3" id="ruc"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-2"><strong>Asignado a:</strong></div>
+                            <div class="col-sm-3" id="usuario"></div>
+                            <div class="col-sm-2 col-sm-offset-2"><strong>Fecha Entrega:</strong></div>
+                            <div class="col-sm-3" id="fecha"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-2"><strong>Notas:</strong></div>
+                            <div class="col-sm-3" id="notas"></div>
+                            <div class="col-sm-2 col-sm-offset-2"><strong>Observación:</strong></div>
+                            <div class="col-sm-3" id="obs"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <form class="form-horizontal" id="form-estados">
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <table class="table table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>Código</th>
+                                        <th>Artículo</th>
+                                        <th>Estado</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="cuerpo">
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                    <button type="submit" id="save" class="save btn btn-primary">Guardar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

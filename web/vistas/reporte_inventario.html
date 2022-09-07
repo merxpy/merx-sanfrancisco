@@ -1,0 +1,46 @@
+<!-- Modal -->
+<div class="modal fade" id="modal-inventario" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title"><strong>Informe de Inventario</strong></h2>
+            </div>
+            <form target="_blank" class="form-horizontal" method="POST" id="form-inventario">
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label class="control-label col-sm-3" for="id_marca">Marca: </label>
+                        <div class="col-sm-8">
+                            <select class="form-control" name="id_marca">
+                                <option value="all">Todas las marcas</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-3">Mostrar Precio: </label>
+                        <div class="col-sm-8">
+                            <select class="form-control" name="precio">
+                                <option value="compra">Precio de Compra</option>
+                                <option value="venta">Precio de Venta</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-3">Estado: </label>
+                        <div class="col-sm-8">
+                            <select class="form-control" name="estado">
+                                <option value="all">Todos los estados</option>
+                                <option value="D">En stock</option>
+                                <option value="A">Agotado</option>
+                                <option value="M">Stock mínimo</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                    <button type="submit" class="save btn btn-primary">Generar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

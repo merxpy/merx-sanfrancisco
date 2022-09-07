@@ -1,0 +1,178 @@
+<div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-10">
+        <h2>Orden de Trabajo</h2>
+        <ol class="breadcrumb">
+            <li>
+                <a href="#/inicio">Inicio</a>
+            </li>
+            <li class="active">
+                <a href="#/servicios">Orden de Trabajo</a>
+            </li>
+            <li class="active">
+                <strong>Nuevo</strong>
+            </li>
+        </ol>
+    </div>
+    <div class="col-lg-2">
+    </div>
+</div>   
+<div class="wrapper wrapper-content animated fadeInRight">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="ibox float-e-margins">
+                <div class="ibox-title">
+                    <h5>Nueva Orden</h5>
+                </div>
+                <div class="ibox-content">
+                    <form id="cabecera-pedidos">
+                        <div class="row">
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label">*Cliente:</label>
+                                <div class="col-sm-4">
+                                    <div class="input-group m-b">
+                                        <select id="cliente" class="select-ajax" name="id_cliente" tabindex="1" required="required">
+                                        </select>
+                                        <span class="input-group-btn">
+                                            <a id="nuevo" class="btn btn-primary"><i class="fa fa-plus"></i></a> 
+                                        </span>                 
+                                    </div>
+                                </div>
+                                <label class="col-sm-1 control-label">*Asignado a:</label>
+                                <div class="col-sm-3">
+                                    <div class="input-group m-b">
+                                        <div class="date">
+                                            <select class="form-control" name="asignado_a" tabindex="2" required="required">                                                
+                                            </select>                                            
+                                        </div>
+                                    </div>
+                                </div>
+                                <label class="col-sm-1 control-label">Delivery:</label>
+                                <div class="col-sm-1">
+                                    <div class="switch">
+                                        <div class="onoffswitch">
+                                            <input type="checkbox" name="delivery_ped" value="1" class="onoffswitch-checkbox" id="example1" tabindex="3">
+                                            <label class="onoffswitch-label" for="example1">
+                                                <span class="onoffswitch-inner"></span>
+                                                <span class="onoffswitch-switch"></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label">*Fecha de entrega:</label>
+                                <div class="col-sm-3">
+                                    <div class="input-group m-b">
+                                        <div class="date">
+                                            <input type="text" class="form-control" name="fecha_entrega" data-mask="99/99/9999" autocomplete="off" tabindex="4" required="required">
+                                        </div>
+                                    </div>
+                                </div>
+                                <label class="col-sm-1 control-label">*Hora de entrega:</label>
+                                <div class="col-sm-2">
+                                    <div class="input-group clockpicker" data-autoclose="true">
+                                        <input type="text" name="hora_entrega" class="form-control " value="" tabindex="5" data-mask="99:99" required="required">
+                                        <span class="input-group-addon">
+                                            <span class="far fa-clock"></span>
+                                        </span>
+                                    </div>
+                                </div>
+                                <label class="col-sm-1 control-label">Seña:</label>
+                                <div class="col-sm-3">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control miles" name="senha_ped" value="0" onclick="this.select()" tabindex="6">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label">Lugar de entrega:</label>
+                                <div class="col-sm-3">
+                                    <div class="input-group">
+                                        <textarea name="lugar_entrega" class="form-control" onclick="this.select()" tabindex="7"></textarea>
+                                    </div>
+                                </div>
+                                <label class="col-sm-1 control-label">Observación:</label>
+                                <div class="col-sm-3">
+                                    <textarea name="comentario_ped" class="form-control" tabindex="8"></textarea>
+                                </div>
+                                <label class="col-sm-1 control-label">NOTAS:</label>
+                                <div class="col-sm-3">
+                                    <div class="input-group">
+                                        <textarea name="nota_especial" class="form-control" onclick="this.select()" tabindex="9"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="row m-t">
+                        <form id="buscar">
+                            <div class="form-group">
+                                <div class="col-sm-2 col-sm-offset-1">
+                                    <input id="cantidad" class="touchspin1" type="text" value="1" name="cantidad" tabindex="10" autocomplete="off">
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="input-group m-b">
+                                        <input type="text" class="form-control" id="codigo" placeholder="Código/código de barras" tabindex="11" autocomplete="off" required>
+                                        <span class="input-group-btn">
+                                            <button type="submit" class="btn btn-primary" tabindex="12"><img src="data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHZlcnNpb249IjEuMSIgdmlld0JveD0iMCAwIDUxMiA1MTIiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDUxMiA1MTIiIHdpZHRoPSIxNnB4IiBoZWlnaHQ9IjE2cHgiPgogIDxnPgogICAgPHJlY3Qgd2lkdGg9IjY0IiB5PSIxNiIgaGVpZ2h0PSIyODgiIGZpbGw9IiNGRkZGRkYiLz4KICAgIDxyZWN0IHdpZHRoPSIzMiIgeD0iNDgwIiB5PSIxNiIgaGVpZ2h0PSIyODgiIGZpbGw9IiNGRkZGRkYiLz4KICAgIDxyZWN0IHdpZHRoPSIzMiIgeD0iODAiIHk9IjE2IiBoZWlnaHQ9IjI4OCIgZmlsbD0iI0ZGRkZGRiIvPgogICAgPHBhdGggZD0iTTQyMS4zOTgsMzYwLjE0N0M0MzguMTcyLDMzNC44NDgsNDQ4LDMwNC41NjMsNDQ4LDI3MmMwLTI0Ljg0LTUuODUyLTQ4LjI4My0xNi02OS4yODFWMTZoLTQ4djEyOC4zMDUgICBjLTkuODY3LTcuNDM4LTIwLjU0Ny0xMy44MzItMzItMTguODUyVjE2aC02NHY5NmMtMTAuOTUzLDAtMjEuNjU2LDEuMTE3LTMyLDMuMjI1VjE2SDE0NHYxODYuNzIxICAgYy0xMC4xNDEsMjAuOTk4LTE2LDQ0LjQzOS0xNiw2OS4yNzljMCw4OC4yMjcsNzEuNzgxLDE2MCwxNjAsMTYwYzMyLjU2MywwLDYyLjg0NC05LjgzLDg4LjE0OC0yNi42MDVsODEuMjI3LDgxLjIzICAgYzYuMjUsNi4yNSwxNC40MzgsOS4zNzUsMjIuNjI1LDkuMzc1czE2LjM3NS0zLjEyNSwyMi42MjUtOS4zNzVjMTIuNS0xMi40OTIsMTIuNS0zMi43NTgsMC00NS4yNUw0MjEuMzk4LDM2MC4xNDd6IE0xOTIsMjcyICAgYzAtNTIuOTM4LDQzLjA2My05Niw5Ni05NnM5Niw0My4wNjMsOTYsOTZzLTQzLjA2Myw5Ni05Niw5NlMxOTIsMzI0LjkzOCwxOTIsMjcyeiIgZmlsbD0iI0ZGRkZGRiIvPgogIDwvZz4KPC9zdmc+Cg==" /></button> 
+                                        </span>  
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                        <div class="col-sm-3 pull-right">
+                            <button type="button" class="btn btn-info pull-right" id="b-modal" tabindex="13"><i class="fa fa-search"></i> Buscar Articulos</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="ibox float-e-margins">
+                <div class="ibox-content">
+                    <div class="table-responsive">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Código</th>
+                                    <th class="col-xs-2">Cantidad</th>
+                                    <th class="col-xs-5"><button class="btn btn-default btn-xs" id="fast"><i class="fa fa-plus-square"></i> <b>Artículo</b></button></th>
+                                    <th class="col-xs-2">Precio</th>
+                                    <th class="col-xs-3">Estado</th>
+                                    <th>IVA</th>
+                                    <th>Total</th>
+                                </tr>
+                            </thead>
+                            <tbody id="cuerpo">
+
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <td colspan="6">
+                                        <span class="pull-right">Total: </span>
+                                    </td>
+                                    <td><span id="tot">0</span></td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                    <form id="form-pedidos">
+                        <div class="row col-xs-offset-6">
+                            <a href="javascript:window.history.back();" class="btn btn-default" tabindex="13">Cancelar</a>
+                            <button type="submit" class="btn btn-primary" tabindex="14">Guardar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal -->
+<div id="modal"></div>
+<div id="modalmaq"></div>

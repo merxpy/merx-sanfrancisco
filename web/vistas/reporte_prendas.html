@@ -1,0 +1,62 @@
+<div class="modal fade" id="modal-prendas" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title"><strong>Prendas Atendidas</strong></h2>
+            </div>
+            <form target="_blank" class="form-horizontal" method="GET" id="form-prendas">
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label class="control-label col-sm-3">Periodo: </label>
+                        <div class="date col-sm-8">
+                            <div class="input-group">
+                                <input type="text" id="fecha_inicio" class="input-sm form-control" data-mask="99/99/9999" name="start" autocomplete="off" required/>
+                                <span class="input-group-addon">Hasta</span>
+                                <input type="text" id="fecha_fin" class="input-sm form-control" data-mask="99/99/9999" name="end" autocomplete="off" required/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-3">Categoria: </label>
+                        <div class="col-sm-8">
+                            <select id="select-categoria" class="form-control" name="categoria">
+                                <option>TODAS</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-3">Estado: </label>
+                        <div class="col-sm-8">
+                            <select id="estado" class="form-control" name="estado">
+                                <option>TODOS</option>
+                                <option>PENDIENTE</option>
+                                <option>EN PROCESO</option>
+                                <option>A RETIRAR</option>
+                                <option>RETIRADO</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-3">Sucursal: </label>
+                        <div class="col-sm-8">
+                            <select id="sucursal" class="form-control" name="sucursal">
+                                <option>TODAS</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-3 m-b">Tipo: </label>
+                        <div class="col-sm-8">
+                            <label><input type="radio" value="resumido" name="accion" checked="checked"> Resumido</label>
+                            <label><input type="radio" value="detallado" name="accion"> Detallado</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                    <button type="submit" class="save btn btn-primary">Generar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

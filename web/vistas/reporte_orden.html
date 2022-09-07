@@ -1,0 +1,34 @@
+<div class="modal fade" id="modal-resumen" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title"><strong>Resumen de Ordenes por Cliente</strong></h2>
+            </div>
+            <form target="_blank" class="form-horizontal" method="POST" id="form-resumen">
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label class="control-label col-sm-3" for="id_cliente">Cliente: </label>
+                        <div class="col-sm-8">
+                            <select class="form-control" name="id_cliente">
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-3">Periodo: </label>
+                        <div class="date col-sm-8">
+                            <div class="input-group">
+                                <input type="text" id="inicio" class="input-sm form-control" data-mask="99/99/9999" name="start" autocomplete="off" required/>
+                                <span class="input-group-addon">Hasta</span>
+                                <input type="text" id="fin" class="input-sm form-control" data-mask="99/99/9999" name="end" autocomplete="off" required/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                    <button type="submit" class="save btn btn-primary">Generar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

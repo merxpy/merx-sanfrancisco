@@ -1,0 +1,109 @@
+<div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-10">
+        <h2>Ventas</h2>
+        <ol class="breadcrumb">
+            <li>
+                <a href="#/inicio">Inicio</a>
+            </li>
+            <li class="active">
+                <a class="breadsales">Ventas</a>
+            </li>
+            <li class="active">
+                <strong>Nuevo</strong>
+            </li>
+        </ol>
+    </div>
+    <div class="col-lg-2">
+    </div>
+</div>   
+<div class="wrapper wrapper-content animated fadeInRight">
+    <form id="form-venta">
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-content">
+                        <h3>Factura N°: </h3><small id="fac">0000001</small>
+                        <h3>Día: </h3><small id="date"></small>
+                        <h3>Hora: </h3><small id="time"></small>
+                        <h3>Cajero: </h3><small id="caj"></small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-content">
+                        <h3>Cliente</h3>
+                        <input type="text" class="form-control" id="nombre_cli"  autofocus autocomplete="off">
+                        <h3>R.U.C.</h3>
+                        <input type="text" class="form-control" id="ruc_cli" value="" autocomplete="off">
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-content">
+                        <table>
+                            <tr>
+                                <td>IVA 10: </td>
+                                <td><input type="text" id="i10" value="0" class="form-control" readonly></td>
+                            </tr>
+                            <tr>
+                                <td>IVA 5: </td>
+                                <td><input type="text" id="i5" value="0" class="form-control" readonly></td>
+                            </tr>
+                            <tr>
+                                <td>Exento: </td>
+                                <td><input type="text" id="iE" value="0" class="form-control" readonly></td>
+                            </tr>
+                            <tr>
+                                <td>Total IVA: </td>
+                                <td><input type="text" id="ti" value="0" class="form-control" readonly></td>
+                            </tr>
+                            <tr>
+                                <td>Total: </td>
+                                <td><input type="text" id="tot" value="0" class="form-control" readonly></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-content">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Código</th>
+                                    <th>Cantidad</th>
+                                    <th>Artículo</th>
+                                    <th>Precio</th>
+                                    <th>IVA</th>
+                                    <th>Total</th>
+                                </tr>
+                            </thead>
+                            <tbody id="cuerpo">
+                                <tr class="add">
+                                    <td><input type="text" data-row="u" class="form-control chan cod"></td>
+                                    <td><input type="text" value="1" class="form-control cant"></td>
+                                    <td><input type="text" data-row="u" class="form-control chan nom"></td>
+                                    <td><input type="text" class="form-control price_ar" readonly></td>
+                                    <td><input type="text" class="form-control iva" readonly></td>
+                                    <td><input type="text" class="form-control total_ar" value="0" readonly></td>
+                                    <td><button class="btn btn-danger hide"><i class="fa fa-trash"></i></button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="row col-xs-offset-8">
+                            <a class="btn btn-default breadsales">Cancelar</a>
+                            <button type="submit" id="sav" class="save btn btn-primary">Confirmar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+<!-- Modal -->
+<div id="modal"></div>

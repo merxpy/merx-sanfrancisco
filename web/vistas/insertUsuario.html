@@ -1,0 +1,131 @@
+<div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-10">
+        <h2>Usuarios</h2>
+        <ol class="breadcrumb">
+            <li>
+                <a href="#/inicio">Inicio</a>
+            </li>
+            <li>
+                <a class="breaduser">Usuarios</a>
+            </li>
+            <li class="active">
+                <strong>Nuevo</strong>
+            </li>
+        </ol>
+    </div>
+    <div class="col-lg-2">
+    </div>
+</div>
+<div class="wrapper wrapper-content animated fadeInRight">
+    <form class="form-horizontal" id="form-user">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-title">
+                        <div class="col-xs-6">
+                            <h5>Agregar Usuarios</h5>
+                        </div>
+                    </div>
+                    <div class="ibox-content">
+                        <div class="row">
+                            <div class="form-group has-feedback">
+                                <div>
+                                    <label class="control-label col-sm-3" for="nombre">Usuario:</label>
+                                    <div class="col-sm-8" id="nom">
+                                        <input type="text" class="form-control" id="nombre" placeholder="Usuario" name="alias_usu" required>
+                                    </div>
+                                    <div class="nombre col-sm-8 col-sm-offset-3 hide">
+                                        <label class="control-label text-danger">El usuario debe contener por lo menos 2 caracteres</label>
+                                    </div>
+                                    <div class="usu col-sm-8 col-sm-offset-3 hide">
+                                        <label class="control-label text-danger">El nombre de usuario ya esta registrado</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group has-feedback">
+                                <label class="control-label col-sm-3" for="nombre">Nombre: </label>
+                                <div class="col-sm-8" id="nom">
+                                    <input type="text" class="form-control" id="nom_emp" placeholder="Nombre" name="nombre_emp" required>
+                                </div>
+                            </div>
+                            <div class="form-group has-feedback">
+                                <label class="control-label col-sm-3" for="nombre">Apellido: </label>
+                                <div class="col-sm-8" id="nom">
+                                    <input type="text" class="form-control" id="ape_emp" placeholder="Apellido" name="apellido_emp" autocomplete="off" required>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="form-group has-feedback rm">
+                                    <label class="col-sm-3 control-label" for="pwd">Contraseña:</label>
+                                    <div class="col-sm-8" id="pass">
+                                        <input type="password" class="form-control" id="pwd" placeholder="Contraseña" name="password_usu"  autocomplete="off" required>
+                                    </div>
+                                </div>
+                                <div class="form-group has-feedback rm">
+                                    <label class="col-sm-3 control-label" for="confirm">Confirma tu contraseña:</label>
+                                    <div class="col-sm-8" id="con">
+                                        <input type="password" class="form-control" id="confirm" name="pwd_again" placeholder="Confirmar contraseña" required>
+                                    </div>
+                                    <div class="no col-sm-8 col-sm-offset-3 hide">
+                                        <label class="text-danger">Los campos no coinciden</label>
+                                    </div>
+                                    <div class="nada col-sm-8 col-sm-offset-3 hide">
+                                        <label class="text-danger">La contraseña debe contener por lo menos 4 caracteres</label>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                            <!--IMPLEMENTAR UN SELECT SELECTYPE-->
+                            <div class="form-group">
+                                <label class="control-label col-sm-3" for="sucursal">Sucursal: </label>
+                                <div class="col-sm-8 parent">
+                                    <select class="form-control select2" name="id_sucursal" data-width="100%" id="sucursal" required>
+                                        <option></option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-content">
+                        <div class="row">
+                            <div class="table-responsive">
+                                <table class="table table-hover" id="table-per">
+                                    <thead>
+                                        <tr>
+                                            <th><input class="select-all" type="checkbox" value=""></th>
+                                            <th>Módulo</th>
+                                            <th>Ver</th>
+                                            <th>Agregar</th>
+                                            <th>Editar</th>
+                                            <th>Aprobar/Habilitar</th>
+                                            <th>Inhabilitar/Anular</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="permisos">
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="alert alert-warning alert-dismissable hide">
+                                <button class="close" type="button"><i class="fa fa-times"></i></button>
+                                <center><strong>Debe seleccionar al menos un módulo</strong></center>
+                            </div>
+                            <div class="hr-line-dashed"></div>
+                            <div class="pull-right">
+                                <button class="save btn btn-primary" id="save">Guardar</button>
+                                <button type="button" class="btn btn-default" onclick="window.history.back();">Cancelar</button>    
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+<div id="modal"></div>

@@ -1,0 +1,105 @@
+<div class="modal inmodal fade" id="modal-empresa" tabindex="-1" role="dialog"  aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Datos de la Empresa </h4>
+            </div>
+            <form id="form-empresa" class="form-horizontal">
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label class="control-label col-sm-3">Nombre:</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" id="nombre_empresa" name="nombre_empresa" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-3">Representante: </label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" id="legal" name="representante_legal">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-3">R.U.C.: </label>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control num doc" id="ruc_empresa" name="ruc_empresa" required>
+                        </div>
+                        <div class="col-sm-2">
+                            <input type="text" class="form-control dv" id="dv_empresa" name="dv_empresa" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-3">Timbrado: </label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" data-mask="99999999" id="timbrado_empresa" name="timbrado_empresa" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-3">Validez: </label>
+                        <div class="col-sm-8">
+                            <div class="input-daterange input-group" id="datepicker">
+                                <input type="text" class="input-sm form-control" data-mask="99/99/9999" name="inicio_vigencia" required="required">
+                                <span class="input-group-addon">al</span>
+                                <input type="text" class="input-sm form-control" data-mask="99/99/9999" name="fin_vigencia" required="required">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-3">Telefono: </label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control num" id="telefono_empresa" name="telefono_empresa">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-3">Celular: </label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control num" id="celular_empresa" name="celular_empresa">
+                        </div>
+                    </div>
+                    <div class="form-group"> 
+                        <label class="control-label col-sm-3">Impresora: </label>
+                        <div class="col-sm-8">
+                            <select class="form-control select2" data-width="100%" name="impresora" id="impresora" required>                                
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-3">Impresora Térmica: </label>
+                        <div class="col-sm-8">
+                            <select class="form-control select2" data-width="100%" name="thermal_printer" id="thermal_printer" required>                                
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-3">Sitio Web: </label>
+                        <div class="col-sm-8">
+                            <input type="url" class="form-control" id="sitio_empresa" name="sitio_empresa">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-3" for="ciudad">Ciudad: </label>
+                        <div class="col-sm-8 parent">
+                            <select class="form-control select2" data-width="100%" name="id_ciudad" id="ciudad" required>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-3">Logo: </label>
+                        <div class="col-sm-8">
+                            <img id="preview" class="img-thumbnail m-b"/>
+                            <div class="fileinput fileinput-new" data-provides="fileinput">
+                                <span class="btn btn-default btn-file"><span class="fileinput-new">Elegir</span>
+                                    <span class="fileinput-exists">Cambiar</span><input type="file" name="logo_emp"/></span>
+                                <span class="fileinput-filename"></span>
+                                <a href="#" class="close fileinput-exists" data-dismiss="fileinput" style="float: none">×</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                    <button type="submit" id="save" class="save btn btn-primary">Guardar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,83 @@
+<div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-10">
+        <h2>Ventas</h2>
+        <ol class="breadcrumb">
+            <li>
+                <a href="#/inicio">Inicio</a>
+            </li>
+            <li class="active">
+                <a href="#/bajastock">Alta y Baja de Stock</a>
+            </li>
+            <li class="active">
+                <strong>Nueva Alta/Baja</strong>
+            </li>
+        </ol>
+    </div>
+</div>
+<div class="wrapper wrapper-content animated fadeInRight">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="ibox float-e-margins">
+                <div class="ibox-title">
+                    <h5>Nueva Baja de Stock</h5>
+                </div>
+                <div class="ibox-content">
+                    <div class="row">
+                        <form id="buscar">
+                            <div class="form-group">
+                                <div class="col-sm-1 col-sm-offset-1">
+                                    <input type="number"  value="1" id="cantidad" class="form-control" name="cantidad" min="1" required>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="input-group m-b">
+                                        <input type="text" class="form-control" id="codigo" placeholder="Código/código de barras" required>
+                                        <span class="input-group-btn">
+                                            <button type="submit" class="btn btn-primary"><img src="data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHZlcnNpb249IjEuMSIgdmlld0JveD0iMCAwIDUxMiA1MTIiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDUxMiA1MTIiIHdpZHRoPSIxNnB4IiBoZWlnaHQ9IjE2cHgiPgogIDxnPgogICAgPHJlY3Qgd2lkdGg9IjY0IiB5PSIxNiIgaGVpZ2h0PSIyODgiIGZpbGw9IiNGRkZGRkYiLz4KICAgIDxyZWN0IHdpZHRoPSIzMiIgeD0iNDgwIiB5PSIxNiIgaGVpZ2h0PSIyODgiIGZpbGw9IiNGRkZGRkYiLz4KICAgIDxyZWN0IHdpZHRoPSIzMiIgeD0iODAiIHk9IjE2IiBoZWlnaHQ9IjI4OCIgZmlsbD0iI0ZGRkZGRiIvPgogICAgPHBhdGggZD0iTTQyMS4zOTgsMzYwLjE0N0M0MzguMTcyLDMzNC44NDgsNDQ4LDMwNC41NjMsNDQ4LDI3MmMwLTI0Ljg0LTUuODUyLTQ4LjI4My0xNi02OS4yODFWMTZoLTQ4djEyOC4zMDUgICBjLTkuODY3LTcuNDM4LTIwLjU0Ny0xMy44MzItMzItMTguODUyVjE2aC02NHY5NmMtMTAuOTUzLDAtMjEuNjU2LDEuMTE3LTMyLDMuMjI1VjE2SDE0NHYxODYuNzIxICAgYy0xMC4xNDEsMjAuOTk4LTE2LDQ0LjQzOS0xNiw2OS4yNzljMCw4OC4yMjcsNzEuNzgxLDE2MCwxNjAsMTYwYzMyLjU2MywwLDYyLjg0NC05LjgzLDg4LjE0OC0yNi42MDVsODEuMjI3LDgxLjIzICAgYzYuMjUsNi4yNSwxNC40MzgsOS4zNzUsMjIuNjI1LDkuMzc1czE2LjM3NS0zLjEyNSwyMi42MjUtOS4zNzVjMTIuNS0xMi40OTIsMTIuNS0zMi43NTgsMC00NS4yNUw0MjEuMzk4LDM2MC4xNDd6IE0xOTIsMjcyICAgYzAtNTIuOTM4LDQzLjA2My05Niw5Ni05NnM5Niw0My4wNjMsOTYsOTZzLTQzLjA2Myw5Ni05Niw5NlMxOTIsMzI0LjkzOCwxOTIsMjcyeiIgZmlsbD0iI0ZGRkZGRiIvPgogIDwvZz4KPC9zdmc+Cg==" /></button> 
+                                        </span>  
+                                    </div>
+                                </div>
+                                <div class="col-sm-4 pull-right">
+                                    <button type="button" class="btn btn-info pull-right" id="b-modal"><i class="fa fa-search"></i> Buscar Articulos</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="ibox float-e-margins">
+                <div class="ibox-content">
+                    <form id="baja">
+                        <div class="table-responsive">
+
+                            <table class="table table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>Código</th>
+                                        <th>Merma</th>
+                                        <th>Cantidad Alta/Baja</th>
+                                        <th>Artículo</th>
+                                        <th>Precio</th>
+                                        <th>Total Alta/Baja</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="cuerpo">
+
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="row col-xs-offset-6">
+                            <a href="javascript:window.history.back();" class="btn btn-default">Cancelar</a>
+                            <button type="submit" class="save btn btn-primary">Guardar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="modal">    
+</div>

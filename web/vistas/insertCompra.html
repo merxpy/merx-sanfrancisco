@@ -1,0 +1,171 @@
+<div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-10">
+        <h2>Compras</h2>
+        <ol class="breadcrumb">
+            <li>
+                <a href="#/inicio">Inicio</a>
+            </li>
+            <li class="active">
+                <a href="#/compras">Compras</a>
+            </li>
+            <li class="active">
+                <strong>Nuevo</strong>
+            </li>
+        </ol>
+    </div>
+    <div class="col-lg-2">
+    </div>
+</div>   
+<div class="wrapper wrapper-content animated fadeInRight">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="ibox float-e-margins">
+                <div class="ibox-title">
+                    <h5>Nueva Compra</h5>
+                </div>
+                <div class="ibox-content">
+                    <form id="cabecera-compra">
+                        <div class="row">
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label">*Proveedor</label>
+                                <div class="col-sm-4">
+                                    <div class="input-group m-b">
+                                        <select id="pro" class="select-ajax" name="id_proveedor" tabindex="1" required="true">
+                                            
+                                        </select>
+                                        <span class="input-group-btn">
+                                            <a id="nuevo" class="btn btn-primary" tabindex="2"><i class="fa fa-plus"></i></a> 
+                                        </span>                 
+                                    </div>
+                                </div>
+                                <label class="col-sm-1 control-label">*Fecha </label>
+                                <div class="col-sm-2">
+                                    <div class="date">
+                                        <input type="text" class="form-control" name="fecha_compra" data-mask="99/99/9999" tabindex="3" autocomplete="off" required>
+                                    </div>
+                                </div>
+                                <label class="col-sm-1 control-label">*N° Factura </label>
+                                <div class="col-sm-3">
+                                    <input type="text" name="factura_compra" class="form-control" data-mask="999-999-9999999" tabindex="4" autocomplete="off" required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label">Timbrado: </label>
+                                <div class="col-sm-3">
+                                    <input type="text" name="timbrado_compra" class="form-control" data-mask="99999999" tabindex="5" autocomplete="off" required>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="row">
+                        <form id="buscar">
+                            <div class="form-group">
+                                <div class="col-sm-2 col-sm-offset-1">
+                                    <input class="touchspin1" type="text" value="1" name="cantidad" tabindex="5" autocomplete="off">
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="input-group m-b">
+                                        <input type="text" class="form-control" id="codigo" placeholder="Código/código de barras" tabindex="6" autocomplete="off" required>
+                                        <span class="input-group-btn">
+                                            <button type="submit" class="btn btn-primary" tabindex="7"><img src="data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHZlcnNpb249IjEuMSIgdmlld0JveD0iMCAwIDUxMiA1MTIiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDUxMiA1MTIiIHdpZHRoPSIxNnB4IiBoZWlnaHQ9IjE2cHgiPgogIDxnPgogICAgPHJlY3Qgd2lkdGg9IjY0IiB5PSIxNiIgaGVpZ2h0PSIyODgiIGZpbGw9IiNGRkZGRkYiLz4KICAgIDxyZWN0IHdpZHRoPSIzMiIgeD0iNDgwIiB5PSIxNiIgaGVpZ2h0PSIyODgiIGZpbGw9IiNGRkZGRkYiLz4KICAgIDxyZWN0IHdpZHRoPSIzMiIgeD0iODAiIHk9IjE2IiBoZWlnaHQ9IjI4OCIgZmlsbD0iI0ZGRkZGRiIvPgogICAgPHBhdGggZD0iTTQyMS4zOTgsMzYwLjE0N0M0MzguMTcyLDMzNC44NDgsNDQ4LDMwNC41NjMsNDQ4LDI3MmMwLTI0Ljg0LTUuODUyLTQ4LjI4My0xNi02OS4yODFWMTZoLTQ4djEyOC4zMDUgICBjLTkuODY3LTcuNDM4LTIwLjU0Ny0xMy44MzItMzItMTguODUyVjE2aC02NHY5NmMtMTAuOTUzLDAtMjEuNjU2LDEuMTE3LTMyLDMuMjI1VjE2SDE0NHYxODYuNzIxICAgYy0xMC4xNDEsMjAuOTk4LTE2LDQ0LjQzOS0xNiw2OS4yNzljMCw4OC4yMjcsNzEuNzgxLDE2MCwxNjAsMTYwYzMyLjU2MywwLDYyLjg0NC05LjgzLDg4LjE0OC0yNi42MDVsODEuMjI3LDgxLjIzICAgYzYuMjUsNi4yNSwxNC40MzgsOS4zNzUsMjIuNjI1LDkuMzc1czE2LjM3NS0zLjEyNSwyMi42MjUtOS4zNzVjMTIuNS0xMi40OTIsMTIuNS0zMi43NTgsMC00NS4yNUw0MjEuMzk4LDM2MC4xNDd6IE0xOTIsMjcyICAgYzAtNTIuOTM4LDQzLjA2My05Niw5Ni05NnM5Niw0My4wNjMsOTYsOTZzLTQzLjA2Myw5Ni05Niw5NlMxOTIsMzI0LjkzOCwxOTIsMjcyeiIgZmlsbD0iI0ZGRkZGRiIvPgogIDwvZz4KPC9zdmc+Cg==" /></button> 
+                                        </span>  
+                                    </div>
+                                </div>
+                                <div class="col-sm-2">
+                                    <div>
+                                        <label> 
+                                            <input type="radio" tabindex="8" checked="" value="contado" name="tipo_compra"> Contado
+                                        </label>
+                                    </div>
+                                    <div>
+                                        <label>
+                                            <input type="radio"  tabindex="9" value="crédito" name="tipo_compra"> Crédito
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                        <div class="col-sm-3">
+                            <button type="button" class="btn btn-info pull-right" id="b-modal" tabindex="10"><i class="fa fa-search"></i> Buscar Articulos</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="ibox float-e-margins">
+                <div class="ibox-content">
+                    <div class="table-responsive">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Código</th>
+                                    <th class="col-xs-2">Cantidad</th>
+                                    <th class="col-xs-6"><button class="btn btn-default btn-xs" id="fast"><i class="fa fa-plus-square"></i> <b>Artículo</b></button></th>
+                                    <th class="col-xs-2">Precio</th>
+                                    <th class="col-xs-2">Descuento %</th>
+                                    <th>IVA</th>
+                                    <th>Total</th>
+                                </tr>
+                            </thead>
+                            <tbody id="cuerpo">
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <td colspan="6">
+                                        <span class="pull-right">IVA 10:</span> 
+                                    </td>
+                                    <td><span id="i10">0</span></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="6">
+                                        <span class="pull-right">IVA 5: </span>
+                                    </td>
+                                    <td><span id="i5">0</span></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="6">
+                                        <span class="pull-right">Exentas:</span>
+                                    </td>
+                                    <td><span id="ex">0</span></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="6">
+                                        <span class="pull-right">Total I.V.A: </span>
+                                    </td>
+                                    <td><span id="totiva">0</span></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="6">
+                                        <span class="pull-right">Descuentos: </span>
+                                    </td>
+                                    <td><span id="totaldescuento">0</span></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="6">
+                                        <span class="pull-right">Total: </span>
+                                    </td>
+                                    <td><span id="tot">0</span></td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                    <form id="form-compras">
+                        <div class="row col-xs-offset-6">
+                            <a href="javascript:window.history.back();" class="btn btn-default" tabindex="11">Cancelar</a>
+                            <button type="submit" class="btn btn-primary" tabindex="12">Guardar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal -->
+<div id="modal-x"></div>
+<div id="modal"></div>
+

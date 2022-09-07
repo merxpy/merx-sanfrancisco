@@ -1,0 +1,188 @@
+<div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-10">
+        <h2>Orden de Trabajo</h2>
+        <ol class="breadcrumb">
+            <li>
+                <a href="#/inicio">Inicio</a>
+            </li>
+            <li class="active">
+                <a href="#/servicios">Orden de Trabajo</a>
+            </li>
+            <li class="active">
+                <strong>Nuevo</strong>
+            </li>
+        </ol>
+    </div>
+    <div class="col-lg-2">
+    </div>
+</div>   
+<div class="wrapper wrapper-content animated fadeInRight">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="ibox float-e-margins">
+                <div class="ibox-title">
+                    <h5>Nueva Orden</h5>
+                </div>
+                <div class="ibox-content">
+                    <form id="cabecera-pedidos">
+                        <div class="row">
+                            <div class="form-group">
+
+                                <div class="col-sm-4">
+                                    <label class="control-label">*Cliente:</label>
+                                    <div class="input-group m-b">
+                                        <select id="cliente" class="select-ajax" name="id_cliente" tabindex="1" required="required">
+                                        </select>
+                                        <span class="input-group-btn">
+                                            <a id="nuevo" class="btn btn-primary"><i class="fa fa-plus"></i></a> 
+                                        </span>                 
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-3">
+                                    <label class="control-label">*Asignado a:</label>
+                                    <div class="input-group m-b">
+                                        <div class="date">
+                                            <select class="form-control" name="asignado_a" tabindex="2" required="required">                                                
+                                            </select>                                            
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-2">
+                                    <label class="control-label">Delivery:</label>
+                                    <div class="switch">
+                                        <div class="onoffswitch">
+                                            <input type="checkbox" name="delivery_ped" value="1" class="onoffswitch-checkbox" id="example1" tabindex="3">
+                                            <label class="onoffswitch-label" for="example1">
+                                                <span class="onoffswitch-inner"></span>
+                                                <span class="onoffswitch-switch"></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-3">
+                                    <label class="control-label">*Fecha de entrega:</label>
+                                    <div class="input-group m-b">
+                                        <div class="date">
+                                            <input type="text" class="form-control" name="fecha_entrega" data-mask="99/99/9999" autocomplete="off" tabindex="4" required="required">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group">                              
+                                <div class="col-sm-4">
+                                    <label class="control-label">*Hora de entrega:</label>
+                                    <div class="input-group clockpicker" data-autoclose="true">
+                                        <input type="text" name="hora_entrega" class="form-control " value="" tabindex="5" data-mask="99:99" required="required">
+                                        <span class="input-group-addon">
+                                            <span class="far fa-clock"></span>
+                                        </span>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-4">
+                                    <label class="control-label">Seña:</label>
+                                    <input type="text" class="form-control miles input-group m-b" name="senha_ped" value="0" onclick="this.select()" tabindex="6">
+                                </div>
+
+                                <div class="col-sm-4">
+                                    <label class="control-label">Descuento:</label>
+                                    <input type="text" class="form-control miles input-group m-b" name="descuento_ped" value="0" onclick="this.select()" tabindex="7">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group">
+
+                                <div class="col-sm-4">
+                                    <label class="control-label">Lugar de entrega:</label>
+                                    <textarea name="lugar_entrega" class="form-control input-group m-b" onclick="this.select()" tabindex="8"></textarea>
+                                </div>
+
+                                <div class="col-sm-4">
+                                    <label class="control-label">Observación:</label>
+                                    <textarea name="comentario_ped" class="form-control input-group m-b" tabindex="9"></textarea>
+                                </div>
+
+                                <div class="col-sm-4">
+                                    <label class="control-label">NOTAS:</label>
+                                    <textarea name="nota_especial" class="form-control input-group m-b" onclick="this.select()" tabindex="10"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="ibox float-e-margins">
+
+                <div class="ibox-content">
+                    <div class="tabs-container">
+                        <ul class="nav nav-tabs">
+                            <li class="active"><a data-toggle="tab" href="#articulos">ARTÍCULOS</a></li>
+                            <li><a data-toggle="tab" href="#detalle">DETALLE</a></li>
+                        </ul>
+                        <div class="tab-content">
+                            <div id="articulos" class="tab-pane active">
+                                <div class="row">
+                                    <div class="table-responsive">
+                                        <div class="tabs-container">
+                                            <ul class="nav nav-tabs">
+
+                                            </ul>
+                                            <div class="tab-content">
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="detalle" class="tab-pane">
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>Código</th>
+                                            <th class="col-xs-2">Cantidad</th>
+                                            <th class="col-xs-3"><button class="btn btn-default btn-xs" id="fast"><i class="fa fa-plus-square"></i> <b>Artículo</b></button></th>
+                                            <th class="col-xs-2">Descripción</th>
+                                            <th class="col-xs-2">Precio</th>
+                                            <th class="col-xs-3">Estado</th>
+                                            <th>IVA</th>
+                                            <th>Total</th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="cuerpo">
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="col-xs-offset-6">
+                        <span class="col-xs-offset-8"><b>Total:</b> <span id="tot">0</span></span>
+                        <span class="col-xs-offset-8"><b>Descuento:</b> <span id="descuento">0</span></span>
+                        <span class="col-xs-offset-8"><b>Saldo:</b> <span id="saldo">0</span></span>
+                    </div>
+                    <br>
+                    <form id="form-pedidos">
+                        <div class="row col-xs-offset-6">
+                            <a href="javascript:window.history.back();" class="btn btn-default" tabindex="13">Cancelar</a>
+                            <button type="submit" class="btn btn-primary" tabindex="14">Guardar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal -->
+<div id="modal"></div>
