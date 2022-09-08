@@ -6,3 +6,5 @@ nbbuild/
 dist/
 nbdist/
 .nb-gradle/
+web/email_templates
+web/locales

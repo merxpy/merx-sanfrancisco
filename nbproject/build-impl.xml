@@ -1003,12 +1003,12 @@ exists or setup the property manually. For example like this:
         <copyfiles files="${file.reference.jcifs-ng-2.1.1.jar}" iftldtodir="${build.web.dir}/WEB-INF" todir="${dist.ear.dir}/lib"/>
         <copyfiles files="${file.reference.jxl-2.6.12.jar}" iftldtodir="${build.web.dir}/WEB-INF" todir="${dist.ear.dir}/lib"/>
         <copyfiles files="${file.reference.mysql-connector-java-5.1.23-bin.jar}" iftldtodir="${build.web.dir}/WEB-INF" todir="${dist.ear.dir}/lib"/>
+        <copyfiles files="${file.reference.mysql-connector-java-8.0.25.jar}" iftldtodir="${build.web.dir}/WEB-INF" todir="${dist.ear.dir}/lib"/>
         <copyfiles files="${file.reference.png-encoder-1.5.jar}" iftldtodir="${build.web.dir}/WEB-INF" todir="${dist.ear.dir}/lib"/>
         <copyfiles files="${file.reference.poi-4.0.0.jar}" iftldtodir="${build.web.dir}/WEB-INF" todir="${dist.ear.dir}/lib"/>
+        <copyfiles files="${file.reference.rhino-1.7.13.jar}" iftldtodir="${build.web.dir}/WEB-INF" todir="${dist.ear.dir}/lib"/>
         <copyfiles files="${file.reference.slf4j-api-1.7.24.jar}" iftldtodir="${build.web.dir}/WEB-INF" todir="${dist.ear.dir}/lib"/>
         <copyfiles files="${file.reference.zip4j_1.3.2.jar}" iftldtodir="${build.web.dir}/WEB-INF" todir="${dist.ear.dir}/lib"/>
-        <copyfiles files="${file.reference.jasperreports-6.15.0.jar}" iftldtodir="${build.web.dir}/WEB-INF" todir="${dist.ear.dir}/lib"/>
-        <copyfiles files="${file.reference.rhino-1.7.13.jar}" iftldtodir="${build.web.dir}/WEB-INF" todir="${dist.ear.dir}/lib"/>
         <mkdir dir="${build.web.dir}/META-INF"/>
         <manifest file="${build.web.dir}/META-INF/MANIFEST.MF" mode="update"/>
     </target>
@@ -1034,12 +1034,12 @@ exists or setup the property manually. For example like this:
         <copyfiles files="${file.reference.jcifs-ng-2.1.1.jar}" todir="${build.web.dir}/WEB-INF/lib"/>
         <copyfiles files="${file.reference.jxl-2.6.12.jar}" todir="${build.web.dir}/WEB-INF/lib"/>
         <copyfiles files="${file.reference.mysql-connector-java-5.1.23-bin.jar}" todir="${build.web.dir}/WEB-INF/lib"/>
+        <copyfiles files="${file.reference.mysql-connector-java-8.0.25.jar}" todir="${build.web.dir}/WEB-INF/lib"/>
         <copyfiles files="${file.reference.png-encoder-1.5.jar}" todir="${build.web.dir}/WEB-INF/lib"/>
         <copyfiles files="${file.reference.poi-4.0.0.jar}" todir="${build.web.dir}/WEB-INF/lib"/>
+        <copyfiles files="${file.reference.rhino-1.7.13.jar}" todir="${build.web.dir}/WEB-INF/lib"/>
         <copyfiles files="${file.reference.slf4j-api-1.7.24.jar}" todir="${build.web.dir}/WEB-INF/lib"/>
         <copyfiles files="${file.reference.zip4j_1.3.2.jar}" todir="${build.web.dir}/WEB-INF/lib"/>
-        <copyfiles files="${file.reference.jasperreports-6.15.0.jar}" todir="${build.web.dir}/WEB-INF/lib"/>
-        <copyfiles files="${file.reference.rhino-1.7.13.jar}" todir="${build.web.dir}/WEB-INF/lib"/>
     </target>
     <target depends="init" if="dist.ear.dir" name="-clean-webinf-lib">
         <delete dir="${build.web.dir}/WEB-INF/lib"/>
@@ -1444,6 +1444,7 @@ exists or setup the property manually. For example like this:
     </target>
     <target depends="init,compile-test,-debug-start-debugger-test,-debug-start-debuggee-test" name="debug-test"/>
     <target depends="init,compile-test-single,-debug-start-debugger-test,-debug-start-debuggee-test-method" name="debug-test-method"/>
+    <target depends="debug-test-method" name="debug-single-method"/>
     <target depends="init,-pre-debug-fix,compile-test-single" if="netbeans.home" name="-do-debug-fix-test">
         <webproject1:nbjpdareload dir="${build.test.classes.dir}"/>
     </target>
