@@ -87,10 +87,30 @@ define(['sucursalesControlador'], function (sucursal) {
                 $('input[name="apellido_emp"]').val(response.apellido_emp);
                 setTimeout(() => {
                     $('select[name="id_sucursal"]').val(response.id_sucursal).trigger("change");
+                    $('input[name="password_usu"]').parent().parent().parent().remove();
                     if (id !== 0) {
-                        $('input[name="password_usu"]').parent().parent().parent().remove();
-                        $(`.ibox-title`).append(`<a id="change" class="btn btn-primary btn-xs pull-right"><i class="fa fa-key"></i> Cambiar Contraseña</a>`)
-                        CambiarPassword(id);
+                        $.post("usuarioControlador", {
+                            accion: "admin"
+                        }).done((response) => {
+                            if (response == "SI") {
+                                $.post("usuarioControlador", {
+                                    accion: "verificarAdmin",
+                                    id_usuario: id
+                                }).done((response) => {
+                                    if (response == "NO") {
+                                        $(`.ibox-title`).append(`<a id="change" class="btn btn-primary btn-xs pull-right"><i class="fa fa-key"></i> Cambiar Contraseña</a>`)
+                                        CambiarPassword(id);
+                                    }
+
+                                }).fail((response, jqxhr, error) => {
+                                    toastr.error(error + ", contacte con el desarrollador");
+                                });
+                            }
+
+                        }).fail((response, jqxhr, error) => {
+                            toastr.error(error + ", contacte con el desarrollador");
+                        });
+
                     }
                 }, 250);
                 exports.AgregarUsuario(id);
@@ -366,5 +386,6 @@ define(['sucursalesControlador'], function (sucursal) {
             });
         });
     };
+
     return exports;
 });

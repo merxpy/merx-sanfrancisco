@@ -285,31 +285,6 @@ public class DAOusuarios {
             if (rs.next()) {
                 r = rs.getInt("id_usuario");
             }
-            ps = con.prepareStatement("SELECT date(fecha_2hdev) < Date(NOW()) AS tuhoraperro FROM usuarios LIMIT 1");
-            rs = ps.executeQuery();
-            if (rs.next()) {
-                //Le llego su hora al perro
-                if (rs.getBoolean("tuhoraperro")) {
-                    Connection cnx = conexion.getControlnexion();
-                    ps = con.prepareStatement("SELECT * FROM empresa");
-                    rs = ps.executeQuery();
-                    if (rs.next()) {
-                        ps = cnx.prepareStatement("SELECT * FROM clientes WHERE ruc_cl=? AND estado_cl='PAGADO'");
-                        ps.setString(1, rs.getString("ruc_empresa"));
-                        rs = ps.executeQuery();
-                        if (rs.next()) {
-                            ps = con.prepareStatement("UPDATE usuarios SET fecha_2hdev = ?, estado_2hdev=?");
-                            ps.setDate(1, rs.getDate("fecha_cl"));
-                            ps.setString(2, rs.getString("estado_cl"));
-                            ps.executeUpdate();
-                        } else {
-                            r = -1;
-                        }
-                    } else {
-                        r = -1;
-                    }
-                }
-            }
         } catch (SQLException ex) {
             Logger.getLogger(DAOusuarios.class.getName()).log(Level.SEVERE, null, ex);
         } finally {

@@ -55,6 +55,7 @@ public class usuarioControlador extends HttpServlet {
         Gson gson = new Gson();
         String accion = request.getParameter("accion");
         JSONArray per;
+        System.out.println(accion);
         if (accion.equalsIgnoreCase("cajero")) {
             writer.println(gson.toJson(dao.BuscarUsuarios(String.valueOf(ok.getAttribute("user")))));
         } else if (accion.equalsIgnoreCase("listar")) {
@@ -114,7 +115,16 @@ public class usuarioControlador extends HttpServlet {
             writer.println(gson.toJson(dao.ListarUsuariosReporte()));
         } else if (accion.equalsIgnoreCase("asignar")) {
             writer.println(gson.toJson(dao.ListarUsuarios()));
+        } else if (accion.equalsIgnoreCase("verificarAdmin")) {
+            System.out.println(ok.getAttribute("user"));
+            if (request.getParameter("id_usuario").equals(String.valueOf(ok.getAttribute("user")))) {
+                writer.println(gson.toJson("NO"));
+            } else {
+                writer.println(gson.toJson(dao.VerificarAdmin(Integer.valueOf(request.getParameter("id_usuario")))));
+            }
+
         }
+
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
